@@ -20,7 +20,7 @@ app.set('view engine', 'pug');
 // Database Connection
 const urlDB = 'mongodb+srv://amr_123:amr1234@shopping.2pnmn.mongodb.net/foodshop?retryWrites=true&w=majority';
 mongoose.connect(urlDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
-    .then((result) => app.listen(3000))
+    .then((result) => app.listen(process.env.PORT || 3000))
     .catch((err) => console.log(err));
 // Routes
 app.get("*", checkUser);

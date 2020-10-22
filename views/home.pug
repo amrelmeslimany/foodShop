@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Foodshop - Home
+        link(rel="shortcut icon", href="/img/fivicon-01.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        // Navbar
+        include ./partial/navbar
+        // Content
+        .content-home.text-center.pt-5
+            .container-fluid
+                h1 Welcome In #[strong.text-primary FoodShop] Site
+                p Our site is shopping for food, you will find more food here.
+                a(class="btn btn-dark mb-5" href="/goods") To Products
+                div(class="food")
+                    img(src="https://blog-eca0.kxcdn.com/wp-content/uploads/2018/07/Drake-meme-Junk-vs-Healthy-food-1060x596.png" class="rounded d-block m-auto img-food img-fluid" width="500px")
+        // Bottom
+        .zgharef-bottom
+            img(src="/img/right-01.svg" class="bottom-img-corners right" draggable="false")
+            img(src="/img/left-01.svg" class="bottom-img-corners left" draggable="false")
+        // Scripts
+        script(src="/js/jquery-3.5.1.min.js")
+        script(src="/js/bootstrap.min.js")

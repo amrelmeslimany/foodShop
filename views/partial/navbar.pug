@@ -1,0 +1,21 @@
+nav(class="navbar navbar-dark bg-dark navbar-expand-lg mb-5")
+    .container-fluid
+        a(class="navbar-brand" href="/") Food#[strong.text-primary Shop]
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+            span(class="navbar-toggler-icon")
+        div(class="collapse navbar-collapse" id="navbarSupportedContent")
+            ul(class="navbar-nav ml-auto")
+                if (user)
+                    li(class="nav-item")
+                        a(class="nav-link text-white" href="/") Hi, #[strong.text-primary #{user.email}]
+                    li(class="nav-item")
+                        a(class="nav-link" href="/goods") Products
+                    li(class="nav-item")
+                        a(class="nav-link mr-2" href="/cart") Cart
+                    li(class="nav-item")
+                        a(class="nav-link text-center bg-primary rounded text-white" href="/logout") Log Out
+                else
+                    li(class="nav-item")
+                        a(class="nav-link mr-2" href="/login") Login
+                    li(class="nav-item")
+                        a(class="nav-link text-center bg-primary rounded text-white" href="/signup") SignUp

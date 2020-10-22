@@ -1,0 +1,43 @@
+mixin card(img,title,cost)
+    .col-md-4.col-sm-6.mb-4
+        .box-good
+            .card
+                img(class="card-img-top" src=img, alt=title)
+                .card-body.text-center
+                    h5.card-title= title.toUpperCase()
+                    h4.card-text.text-primary.mb-3= cost
+                    input(type="number" placeholder="Quantity..." name="quantity" class="form-control mb-2 quantity")
+                    button(class="btn btn-primary btn-block") Add To Cart
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Foodshop - Products
+        link(rel="shortcut icon", href="/img/fivicon-01.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        // Navbar
+        include ./partial/navbar
+        // Content
+        .content-goods
+            .container-fluid
+                h1.mb-5.pb-2.text-center Welcome In Our Products Page
+                .row
+                    +card(`https://sifu.unileversolutions.com/image/en-EG/recipe-topvisual/2/1260-709/big-mac-n-cheese-burger-50349315.jpg`,"Burger","50.00$")
+                    +card(`https://www.qsrmagazine.com/sites/default/files/styles/story_page/public/phut_0.jpg?itok=h30EAnkk`,"Piza","42.30$")
+                    +card(`https://www.cookingclassy.com/wp-content/uploads/2019/11/best-salad-7.jpg`,"Salad","11.80$")
+                    +card(`https://simply-delicious-food.com/wp-content/uploads/2020/07/Easy-salad-sandwiches-with-herb-mayo-5.jpg`,"Sandwich","5.00$")
+                    +card(`https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/thyme-balsamic-beef-rump-c1ba3100.jpg`,"Steak","45.00$")
+                    +card("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190226-seared-tuna-435-1552085484.jpg","Tune Steak","55.00$")
+                    +card("https://cdn.cdnparenting.com/articles/2020/04/28172944/Grilled-Fish-Recipe.jpg","Fish","53.50$")
+                    +card("https://muchbutter.com/wp-content/uploads/2019/01/037-Much-Butter-Tomato-Shrimp-Spaghetti-Pasta-11-500x500.jpg","Spaghetti Shrimp","49.90$")
+                    +card("https://www.edwardsvaham.com/images/uploads/14_356_large.jpg","Sausage","33.50$")
+                    +card("https://assets.kraftfoods.com/recipe_images/opendeploy/514247_1_1_retail-9c7f029dfadc058e2d1f21acc31122570f6aa27d_642x428.jpg","Sour Cream","8.50$")
+                    +card("https://www.dinneratthezoo.com/wp-content/uploads/2019/06/seafood-pasta-5.jpg","Seafood","23.50$")
+                    +card("https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/desktopimages/12889.jpg?ext=.jpg","Bacon","63.00$")
+        // Scripts
+        script(src="/js/jquery-3.5.1.min.js")
+        script(src="/js/bootstrap.min.js")
+        script(src="/js/ajaxFn.js")

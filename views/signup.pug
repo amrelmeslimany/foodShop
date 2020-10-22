@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Foodshop - Signup
+        link(rel="shortcut icon", href="/img/fivicon-01.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        // Navbar
+        include ./partial/navbar
+        // Content
+        .signup
+            h2.text-center Signup
+            form
+                .form-group
+                    label(class="d-block" for="email") Email
+                    input(type="text" name="email" class="from-control" required)
+                    span.email.error.bg-danger.p-1.mt-1.d-block.text-white.rounded
+                .form-group
+                    label(class="d-block" for="password") Password
+                    input(type="password" name="password" class="from-control" required)
+                    span.password.error.bg-danger.p-1.mt-1.d-block.text-white.rounded
+                button.btn.btn-dark.btn-block Signup
+        // Bottom
+        .zgharef-bottom
+            img(src="/img/right-01.svg" class="bottom-img-corners right" draggable="false")
+            img(src="/img/left-01.svg" class="bottom-img-corners left" draggable="false")
+        // Scripts
+        script(src="/js/jquery-3.5.1.min.js")
+        script(src="/js/bootstrap.min.js")
+        script(src="/js/ajaxFn.js")

@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Foodshop - Home
+        link(rel="shortcut icon", href="/img/fivicon-01.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        // Navbar
+        include ./partial/navbar
+        
+        // Content
+        .table-goods
+            .container-fluid
+                div(class="input-group mb-3")
+                    input(type="text" class="form-control  search-in-cart" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2")
+                    div(class="input-group-append")
+                        button(class="btn btn-outline-secondary btn-search" type="button" id="button-addon2") Search
+                div(class="alert alert-warning mt-2" role="alert") When you put name click search and will display Table of searched, if you want to remove this table, put empty name and click search                
+                h4(class="mb-4 text-center no-items") No Items, Please Enter Correct Name
+                .table-responsive
+                    table.table
+                        thead.thead-dark
+                            tr
+                                th Product Name
+                                th Quantity
+                                th Product Price
+                                th Cost
+                                th Options
+                        tbody
+        // Bottom
+        .zgharef-bottom
+            img(src="/img/right-01.svg" class="bottom-img-corners right" draggable="false")
+            img(src="/img/left-01.svg" class="bottom-img-corners left" draggable="false")
+        // Scripts
+        script(src="/js/jquery-3.5.1.min.js")
+        script(src="/js/bootstrap.min.js")
+        script(src="/js/ajaxFn.js")

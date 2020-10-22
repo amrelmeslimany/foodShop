@@ -4,7 +4,9 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
+.content-home{
+  overflow:hidden;
+}
 @media (max-width: 576px) {
   .content-home h1 {
     font-size: 2rem;
